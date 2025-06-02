@@ -19,6 +19,7 @@
       shell: /sbin/nologin
       system: true
       home: /opt/app
+      mode: 0755
 
   - name: create app direcotry
     ansible.builtin.file:
