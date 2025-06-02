@@ -6,7 +6,7 @@
     ansible.builtin.command: dnf module diable redis -y
 
   - name: enable redis 7
-    ansible.builtin.caommnd: dnf module enable redis:7 -y
+    ansible.builtin.command: dnf module enable redis:7 -y
 
   - name: isnatll redis
     ansible.builtin.dnf: 
