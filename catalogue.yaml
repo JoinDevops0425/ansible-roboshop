@@ -2,8 +2,8 @@
   hosts: catalogue
   become: yes
   tasks:
-  - name: disbale default nodejs
-    ansibe.builtin.command: dnf module disable nojes -yes
+  - name: disable default nodejs
+    ansibe.builtin.command: dnf module disable nodejs -yes
 
   - name: enable module nodejs 20
     ansible.builtin.command: dnf module enable nodejs:20 -y
