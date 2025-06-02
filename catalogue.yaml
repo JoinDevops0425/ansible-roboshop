@@ -76,7 +76,7 @@
       msg: "{{catalogue_output}}" 
 
   - name: load products
-    ansible.bulitin.shell: mongosh --host mongodb.persistent.sbs </opt/app/db/master-data.js
+    ansible.builtin.shell: mongosh --host mongodb.persistent.sbs </opt/app/db/master-data.js
     when: catalogue_output.stdout < 0
 
 
