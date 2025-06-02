@@ -23,7 +23,7 @@
   - name: create app direcotry
     ansible.builtin.file:
       path: /opt/app
-      state: direcotry
+      state: directory
 
   - name: download the code file from web
     ansible.builtin.get_url:
