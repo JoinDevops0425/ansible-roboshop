@@ -67,11 +67,13 @@
       name: mongodb-mongosh
       state: present
 
-  - name: load products data
-  community.mongodb.mongodb_shell:
-    login_host: mongodb.persistent.sbs
-    file: "/opt/app/db/master-data.js"
-    idempotent: yes
+  - name: check if products loaded or not
+    ansible.builtin.command: mongosh --host mongodb.persistent.sbs --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
+    register: catalogue_output
+
+  - name: checking the catalogue_output
+    ansible.builtin.debug:
+      msg: "{{catalogue_output}}" 
 
 
 
