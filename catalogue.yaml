@@ -57,5 +57,22 @@
       state: started
       enabled: yes
 
+  - name: copy the monogdb repo
+    ansible.builtin.copy:
+      src: mongo.repo
+      dest: /etc/yum.repos.d/mongo.repo
+
+  - name: install mongodb client
+    ansible.builtin.dnf:
+      name: mongodb-mongosh
+      state: present
+
+  - name: load products data
+  community.mongodb.mongodb_shell:
+    login_host: mongodb.persistent.sbs
+    file: "/opt/app/db/master-data.js"
+    idempotent: yes
+
+
 
 
