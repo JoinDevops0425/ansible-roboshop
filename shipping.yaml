@@ -81,12 +81,12 @@
       login_password: RoboShop@1
       login_host: mysql.persistent.sbs
       state: import
-      target: "{{item}}"
+      target: "/opt/app/db/{{item}}"
       name: all
     loop: 
-    - /opt/app/schema.sql
-    - /opt/app/app-user.sql
-    - /opt/app/master-data.sql
+    - schema.sql
+    - app-user.sql
+    - master-data.sql
 
   - name: restart shipping
     ansible.builtin.service:
