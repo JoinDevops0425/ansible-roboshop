@@ -26,7 +26,7 @@
 
   - name: unzip the shiping code
     ansible.builtin.unarchive:
-      src: /tmp/shipping/zip
+      src: /tmp/shipping.zip
       dest: /opt/app/
       remote_src: yes
 
