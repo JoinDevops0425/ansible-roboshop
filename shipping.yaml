@@ -80,6 +80,7 @@
       login_host: mysql.persistent.sbs
       state: import
       target: "/opt/app/{{item}}"
+      name: all
     loop: 
     - schema.sql
     - app-user.sql
