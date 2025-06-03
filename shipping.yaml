@@ -81,7 +81,7 @@
       login_password: RoboShop@1
       login_host: mysql.persistent.sbs
       state: import
-      target: "/opt/app/{{item}}"
+      target: "{{item}}"
       name: all
     loop: 
     - /opt/app/schema.sql
