@@ -11,17 +11,7 @@
     - gcc
     - python-devel
 
-  - name: download & insatll python dependencies
-    ansible.builtin.pip:
-      requirements: requirements.txt
-      executable: pip3.9
-    args: 
-      chdir: /opt/app
-      
-    # args: 
-    #   chdir: /opt/app
-
-  - name: create roboshop system user
+   - name: create roboshop system user
     ansible.builtin.user:
       name: roboshop
       shell: /sbin/nologin
@@ -44,6 +34,13 @@
       src: /tmp/payment.zip
       dest: /opt/app/
       remote_src: yes
+
+  - name: download & insatll python dependencies
+    ansible.builtin.pip:
+      requirements: /opt/app/requirements.txt
+      executable: pip3.9
+    # args: 
+    #   chdir: /opt/app
 
   - name: copy the payment service to systemd directory 
     ansible.builtin.copy:
