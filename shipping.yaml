@@ -70,7 +70,7 @@
     community.mysql.mysql_info:
       login_user: shipping
       login_password: RoboShop@1
-      host: mysql.persistent.sbs
+      login_host: mysql.persistent.sbs
       login_db: cities
 
   # - name: import data into mysql
