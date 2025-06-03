@@ -30,12 +30,11 @@
       dest: /opt/app/
       remote_src: yes
 
-  - name: chnaging directory
-    ansible.builtin.command:
+  - name: install maven dependencies
+    ansible.builtin.command: mvn clean package
     args:
      chdir: /opt/app
 
-  # - name: install maven dependendcies
 
 
   # - name: Copying the shipping service
