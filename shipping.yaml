@@ -31,9 +31,9 @@
       remote_src: yes
 
   - name: chnaging directory
-    ansible.builtin.command: cd /opt/app
-    # args:
-    #   chdir: /opt/app
+    ansible.builtin.command:
+    args:
+     chdir: /opt/app
 
   # - name: install maven dependendcies
 
