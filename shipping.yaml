@@ -13,7 +13,7 @@
       state: directory
   
   - name: create roboshop systen user
-    ansible.buitin.user:
+    ansible.builtin.user:
       name: roboshop
       shell: /sbin/nologin
       system: true
