@@ -84,9 +84,9 @@
       target: "/opt/app/{{item}}"
       name: all
     loop: 
-    - schema.sql
-    - app-user.sql
-    - master-data.sql
+    - /opt/app/schema.sql
+    - /opt/app/app-user.sql
+    - /opt/app/master-data.sql
 
   - name: restart shipping
     ansible.builtin.service:
